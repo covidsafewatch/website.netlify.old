@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>COVIDSafe.Watch</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Bootstrap TOC -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" />
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+
+    <header>
+        <div class="navbar navbar-dark bg-dark shadow-sm stripes">
+            <div class="container d-flex justify-content-between ">
+                <a href="#" id="nav-title" class="navbar-brand d-flex align-items-center ">
+                    <strong>COVIDSafe Watch</strong>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <a href="https://github.com/ghuntley/covidsafe.watch/edit/master/index.html" class="github-corner"
+        aria-label="Edit this page on Github"><svg width="80" height="80" viewBox="0 0 250 250"
+            style="fill:#212529; color:#fff; position: absolute; top: 56; border: 0; right: 0;z-index: 4000;"
+            aria-hidden="true">
+            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+            <path
+                d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+                fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+            <path
+                d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+                fill="currentColor" class="octo-body"></path>
+        </svg>
+    </a>
+    <!--	Top Jumbotron Header	-->
+    <main role="main" class="flex-shrink-0">
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1>This website is run by the community.</h1>
+                <p class="lead">
+                    If you wish to install COVIDSafe then head to
+                    <a href="https://covidsafe.gov.au/">https://covidsafe.gov.au/</a>
+                    instead.
+                </p>
+                <p>
+                    <a target="_blank" class="btn btn-warning btn-yellow" href="https://covidsafe.gov.au/">
+                        Official COVIDSafe Website
+                        <i class="fa fa-external-link"></i>
+                    </a>
+                    <a target="_blank" class="btn btn-secondary" href="https://discord.gg/4xr7AW5">
+                        Discord Server
+                        <i class="fa fa-external-link"></i>
+                    </a>
+                </p>
+            </div>
+        </section>
+        <!--	Body Section	-->
+        <div class="container-xl">
+            <div class="row">
+
+                <!--	Left Hand Navigation
+                        Uses https://afeld.github.io/bootstrap-toc
+                -->
+                <div class="col-lg-2 col-sm-3">
+                    <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
+                </div>
+
+                <!--	Right Hand Body 	-->
+                <div class="col-lg-10 col-sm-9">
+                    <div class="container-lg">
+                        <div class="row">
+                            <div class="col-md-12 mt-2">
+                                <h2>Social Media</h2>
+                                <p>Follow the below tweet for the latest information.<br>
+                                    <a target="_blank" class="btn btn-primary"
+                                        href="https://twitter.com/GeoffreyHuntley/status/1258174433979625474"
+                                        style="user-select: auto;">
+                                        View full Twitter thread
+                                        <i class="fa fa-external-link" style="user-select: auto;"></i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-lg-6 mt-2">
+                                <h3>Summary in one tweet</h3>
+                                <p>
+                                <blockquote class="twitter-tweet">
+                                    <p lang="en" dir="ltr">
+                                        Many journalists contacted me asking for comment as to why I no longer
+                                        support
+                                        <a
+                                            href="https://twitter.com/hashtag/covidsafe?src=hash&amp;ref_src=twsrc%5Etfw">
+                                            #covidsafe
+                                        </a>.
+                                        Here you go.
+                                        <a href="https://t.co/kMclNhkDmH">https://t.co/kMclNhkDmH</a>
+                                        <a href="https://t.co/4FDfFgCVqD">https://t.co/4FDfFgCVqD</a>
+                                    </p>&mdash;
+                                    geoffrey huntley (@GeoffreyHuntley)
+                                    <a
+                                        href="https://twitter.com/GeoffreyHuntley/status/1258174433979625474?ref_src=twsrc%5Etfw">
+                                        May 6, 2020
+                                    </a>
+                                </blockquote>
+                                </p>
+                            </div>
+
+                            <div class="col-sm-12 col-lg-6 mt-2">
+                                <h3>iPhone not working</h3>
+                                <p>
+                                <blockquote class="twitter-tweet">
+                                    <p lang="en" dir="ltr">.
+                                        <a href="https://twitter.com/wabzqem?ref_src=twsrc%5Etfw">@wabzqem</a>
+                                        &#39;s
+                                        research that
+                                        proves one of the reasons why
+                                        <a
+                                            href="https://twitter.com/hashtag/covidsafe?src=hash&amp;ref_src=twsrc%5Etfw">#covidsafe</a>
+                                        doesn&#39;t work on iPhones in the background has been independantly
+                                        proved.<br><br>
+                                        Sourcecode is truth anything less is bullshit
+                                        <a href="https://twitter.com/DTA?ref_src=twsrc%5Etfw">@DTA</a><br>
+                                        <a href="https://t.co/CkBoEYY3Zy">https://t.co/CkBoEYY3Zy</a><br><br>
+                                        We would like others to also help out proving it again. See 👇
+                                        <a href="https://t.co/7XmXdxwZ3Q">https://t.co/7XmXdxwZ3Q</a>
+                                        <a href="https://t.co/ELKuyQpeTH">pic.twitter.com/ELKuyQpeTH</a>
+                                    </p>&mdash;
+                                    geoffrey huntley (@GeoffreyHuntley)
+                                    <a
+                                        href="https://twitter.com/GeoffreyHuntley/status/1258333046454943744?ref_src=twsrc%5Etfw">
+                                        May 7, 2020
+                                    </a>
+                                </blockquote>
+                                </p>
+                            </div>
+                        </div>
+						<div class="row">
+							<div class="col-sm-12 mt-2">
+								<h3>Transparency comparison</h3>
+							</div>
+						</div>
+                        <div class="row">
+                            <h3>Transparency comparison</h3>
+                            <p>CovidApp transparency comparison between Singapore, United Kingdom and Australia</p>
+                            <div class="col-sm-12 col-lg-6 mt-2">
+<<<<<<< HEAD
+                                
+                                <p>CovidApp transparency comparison between Singapore, United Kingdom and Australia</p>
+=======
+>>>>>>> 06ddf1fc79cd4b2c2956e761f5e80303e06d563e
+                                <p>
+                                <blockquote class="twitter-tweet">
+                                    <p lang="en" dir="ltr">
+                                        1/11: A comparison on the state of CovidApp transparency in Aus, the UK and
+                                        Singapore.<br><br>
+                                        Singapore released app and server code weeks ago.<br><br>
+                                        Aus &amp; the UK released app code, and no server code, within the last 24
+                                        hours.
+                                        <a
+                                            href="https://twitter.com/hashtag/CovidSafeApp?src=hash&amp;ref_src=twsrc%5Etfw">
+                                            #CovidSafeApp
+                                        </a>
+                                        <a href="https://twitter.com/chrisculnane?ref_src=twsrc%5Etfw">@chrisculnane</a>
+                                        <a href="https://twitter.com/rgmerk?ref_src=twsrc%5Etfw">@rgmerk</a>
+                                        <a href="https://twitter.com/noneuclideangrl?ref_src=twsrc%5Etfw">
+                                            @noneuclideangrl
+                                        </a>
+                                        <a href="https://twitter.com/1Br0wn?ref_src=twsrc%5Etfw">@1Br0wn</a>
+                                    </p>&mdash;
+                                    Vanessa Teague (@VTeagueAus)
+                                    <a
+                                        href="https://twitter.com/VTeagueAus/status/1258745850647293953?ref_src=twsrc%5Etfw">
+                                        May 8, 2020
+                                    </a>
+                                </blockquote>
+<<<<<<< HEAD
+                            </div>
+                            <div class="col-sm-12 col-lg-6 mt-2">
+								<p>A GovTech Singapore Software Engineer joins<br> COVIDSafe Watch Discord Server</p>
+                                <p>
+                                <blockquote class="twitter-tweet">
+                               		<p lang="en" dir="ltr">
+                                		Joel Kek is amazing. He&#39;s the engineer that jumped into the 
+                                		<a 
+                                			href="https://t.co/82imCgD6av">
+                                			https://t.co/82imCgD6av
+                                		</a> community and started answering our 
+                                		questions, validated our research and then fixed the Singapore app of the privacy breach. Australia yet to fix.<br><br>
+                                		This is what we wanted from the 
+                                		<a 
+                                			href="https://twitter.com/DTA?ref_src=twsrc%5Etfw">
+                                			@DTA
+                                		</a>
+                                		<br><br>Love. 
+                                		<a 
+                                			href="https://t.co/jlf5huT3U3">
+                                			https://t.co/jlf5huT3U3
+                                		</a> 
+                                		<a 
+                                			href="https://t.co/OhRgRGGyDs">
+                                			pic.twitter.com/OhRgRGGyDs
+                                		</a>
+                                	</p>&mdash; 
+                                	geoffrey huntley (@GeoffreyHuntley) 
+                                	<a 
+                                		href="https://twitter.com/GeoffreyHuntley/status/1259076147276443649?ref_src=twsrc%5Etfw">
+                                		May 9, 2020
+                                	</a>
+                                </blockquote>
+                                </p>
+=======
+                                <blockquote class="twitter-tweet">
+                                    <p lang="en" dir="ltr">
+                                        Joel Kek is amazing. He&#39;s the engineer that jumped into the
+                                        <a href="https://t.co/82imCgD6av">https://t.co/82imCgD6av</a>
+                                        community and started answering our questions, validated our research and then fixed the Singapore app of the privacy breach. Australia yet to fix.<br><br>
+                                        This is what we wanted from the
+                                        <a href="https://twitter.com/DTA?ref_src=twsrc%5Etfw">@DTA</a><br><br>
+                                        Love.
+                                        <a href="https://t.co/jlf5huT3U3">https://t.co/jlf5huT3U3</a>
+                                        <a href="https://t.co/OhRgRGGyDs">pic.twitter.com/OhRgRGGyDs</a>
+                                    </p>&mdash;
+                                    geoffrey huntley (@GeoffreyHuntley)
+                                    <a
+                                        href="https://twitter.com/GeoffreyHuntley/status/1259076147276443649?ref_src=twsrc%5Etfw">
+                                        May 9, 2020
+                                    </a>
+                                </blockquote>
+                                </p>
+                            </div>
+                            <div class="col-sm-12 col-lg-6 mt-2">
+                                <blockquote class="twitter-tweet">
+                                    <p lang="en" dir="ltr">
+                                        Compare <a href="https://twitter.com/DTA?ref_src=twsrc%5Etfw">@DTA</a>
+                                        behaviours to the original authors of the
+                                        <a href="https://twitter.com/hashtag/covidsafe?src=hash&amp;ref_src=twsrc%5Etfw">#covidsafe</a>.
+                                        Singapore. The behaviours demonstrated by this awesome engineer are the norm. &quot;Heya sure, let&#39;s work together to kick COVIDs ass&quot;. Mean while
+                                        <a href="https://twitter.com/DTA?ref_src=twsrc%5Etfw">@DTA</a>
+                                        is like f off. Pull requests closed. Hostile license on source.
+                                        <a href="https://t.co/ySTvz1aZkL">https://t.co/ySTvz1aZkL</a>
+                                        <a href="https://t.co/lgHITiKyWH">pic.twitter.com/lgHITiKyWH</a>
+                                    </p>&mdash;
+                                        geoffrey huntley (@GeoffreyHuntley)
+                                        <a
+                                            href="https://twitter.com/GeoffreyHuntley/status/1259080490100940800?ref_src=twsrc%5Etfw">
+                                            May 9, 2020
+                                        </a>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <h3>Better than Singapore??</h3>
+                            <p>How can the Australian app be better than Singapore's when they're basically the same?</p>
+                            <div class="col-sm-12 col-lg-6 mt-2">
+                                    <blockquote class="twitter-tweet">
+                                        <p lang="en" dir="ltr">
+                                            Dear journos. <br><br>
+                                            1) Please ask how the Australian
+                                            <a href="https://twitter.com/hashtag/covidsafe?src=hash&amp;ref_src=twsrc%5Etfw">#covidsafe</a>
+                                            app can be better than the Singapore app if it is essentially the same. (See below)<br><br>
+                                            2) Please ask how much $$$ was spent on /app development/<br><br>
+                                            3) Please ask if Australia built their own backend vs using Singapore&#39;s.
+                                            <a href="https://t.co/U0JmvqcA6g">https://t.co/U0JmvqcA6g</a>
+                                            <a href="https://t.co/oHFaqTyaZa">pic.twitter.com/oHFaqTyaZa</a>
+                                        </p>&mdash;
+                                        geoffrey huntley (@GeoffreyHuntley)
+                                        <a
+                                            href="https://twitter.com/GeoffreyHuntley/status/1259091209848410112?ref_src=twsrc%5Etfw">
+                                            May 9, 2020
+                                        </a>
+                                    </blockquote>
+                            </div>
+                            <div class="col-sm-12 col-lg-6 mt-2">
+                                <blockquote class="twitter-tweet" data-conversation="none">
+                                    <p lang="en" dir="ltr">
+                                        4) Please note this fact and question how the source code was handed over, what technical training was done (Aussie teams introduced Bluetooth bugs btw) and re-confirm Australia didn&#39;t get help from the original team that made the app.
+                                        <a href="https://t.co/QWUXNGxEGD">pic.twitter.com/QWUXNGxEGD</a>
+                                    </p>&mdash;
+                                    geoffrey huntley (@GeoffreyHuntley)
+                                    <a
+                                        href="https://twitter.com/GeoffreyHuntley/status/1259091218656419843?ref_src=twsrc%5Etfw">
+                                        May 9, 2020
+                                    </a>
+                                </blockquote>
+>>>>>>> 06ddf1fc79cd4b2c2956e761f5e80303e06d563e
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12 mt-2">
+                                <h2>Senate Submission</h2>
+                                <p>
+                                    <a href="https://docs.google.com/document/d/e/2PACX-1vRcwBWxI74YNVVpRmRw54Rn6OHqY0d4yAEJNTTX94uz0wPKYQHHpAdc-Z2rmDLK_0soE1VgOP0J_C8Y/pub?embedded=true"
+                                        target="_blank" class="btn btn-primary">
+                                        Open document in new tab
+                                        <i class="fa fa-external-link"></i>
+                                    </a>
+                                </p>
+                                <p>
+                                    <iframe
+                                        src="https://docs.google.com/document/d/e/2PACX-1vRcwBWxI74YNVVpRmRw54Rn6OHqY0d4yAEJNTTX94uz0wPKYQHHpAdc-Z2rmDLK_0soE1VgOP0J_C8Y/pub?embedded=true"
+                                        width="100%" height="1080"></iframe>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+    <!-- press "e" to fork and edit the current page -->
+    <script src="./js/github.js"></script>
+    <!-- Twitter Embed -->
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8 "
+        integrity="sha384-xKvizsA6Cr9EOHZvl9bMTYOPFQQfRFmaLsknapVkSaOHwWzzytrAggQAXg/UIuz/"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap TOC plugin -->
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"
+        integrity="sha384-OGf04BRlCdmgZXHhCupHT3BIkznbahjfhX8DKSIEXyU9PvSO0/8iMiiVJPcA5vi7"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
